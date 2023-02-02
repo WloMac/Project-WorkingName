@@ -10,6 +10,7 @@ const options = {
 	}
 };
 
+
 fetch('https://concerts-artists-events-tracker.p.rapidapi.com/location?name=Paris&minDate=2023-05-20&maxDate=2023-05-21&page=1', options)
 	.then(response => response.json())
   .then(response => {
