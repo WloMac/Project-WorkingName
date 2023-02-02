@@ -10,10 +10,10 @@ const options = {
 	}
 };
 
-
 fetch('https://concerts-artists-events-tracker.p.rapidapi.com/location?name=Paris&minDate=2023-05-20&maxDate=2023-05-21&page=1', options)
 	.then(response => response.json())
   .then(response => {
+    console.log(response.data);
     let data = response.data;
     let html = '';
     data.forEach(item => {
@@ -22,6 +22,7 @@ fetch('https://concerts-artists-events-tracker.p.rapidapi.com/location?name=Pari
           <h2>${item.name}</h2>
           <p>Location: ${item.location.name}</p>
           <p>Date: ${item.startDate}</p>
+          <p>Date: ${item.description}</p>
         </div>
       `;
     });
@@ -30,6 +31,17 @@ fetch('https://concerts-artists-events-tracker.p.rapidapi.com/location?name=Pari
 document.getElementById("date").innerHTML = date;
   })
   .catch(err => console.error(err));
+
+
+//   $("#").on("click", function(event) {
+
+//   })
+
+// get IP from user 
+//   var userIP = $("#userIp").val();
+
+
+
 
 
 
