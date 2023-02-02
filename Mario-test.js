@@ -23,7 +23,6 @@ fetch('https://concerts-artists-events-tracker.p.rapidapi.com/location?name=Pari
           <p>Date: ${item.startDate}</p>
         </div>
       `;
-      
     });
     document.getElementById("root").innerHTML = html;
     document.getElementById("location").innerHTML = locationName;
