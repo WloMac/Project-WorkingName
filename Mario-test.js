@@ -17,24 +17,28 @@ fetch('https://concerts-artists-events-tracker.p.rapidapi.com/location?name=Pari
     let data = response.data;
     let html = '';
     data.forEach(item => {
+     
       html += `
         <div>
           <h2>${item.name}</h2>
           <p>Location: ${item.location.name}</p>
           <p>Date: ${item.startDate}</p>
           <p>Date: ${item.description}</p>
+          
         </div>
       `;
     });
     document.getElementById("root").innerHTML = html;
     document.getElementById("location").innerHTML = locationName;
 document.getElementById("date").innerHTML = date;
+
+
+
   })
   .catch(err => console.error(err));
 
 
 //   $("#").on("click", function(event) {
-
 //   })
 
 // get IP from user 
