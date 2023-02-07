@@ -1,8 +1,25 @@
+
+// Wlodek's Input - Location based on IP 
+ipLocate();
+
+function ipLocate() {
+  fetch("https://ipgeolocation.abstractapi.com/v1/?api_key=5843dce2715140eca64c3152ccff5fb3")
+.then((response) => response.json())
+.then(function (jsonresponse) {
+      console.log(jsonresponse)
+      console.log(jsonresponse.city)    
+      let city = jsonresponse.city;    
+
+      events(city)
+      
+});
+  
+}
+
 // Concerts - Artists Events Tracker API Documentation
 // Access live, upcoming and past music events by location, venue and artist name.
 // https://rapidapi.com/s.mahmoud97/api/concerts-artists-events-tracker/
-
-// API endpoint
+// Entertainment/Events API endpoint
 let options = {
 	method: 'GET',
 	headers: {
@@ -10,8 +27,10 @@ let options = {
 		'X-RapidAPI-Host': 'concerts-artists-events-tracker.p.rapidapi.com'
 	}
 };
+
 // Fetch method 
-fetch('https://concerts-artists-events-tracker.p.rapidapi.com/location?name=Paris&minDate=2023-05-11&maxDate=2023-05-12&page=1', options)
+function events(city) {
+  fetch(`https://concerts-artists-events-tracker.p.rapidapi.com/location?name=${city}&minDate=2023-05-11&maxDate=2023-05-12&page=1`, options)
 	.then(response => response.json())
   .then(response => {
     console.log(response.data);
@@ -42,26 +61,30 @@ document.getElementById("date").innerHTML = date;
   })
   .catch(err => console.error(err));
 
-let options2 = {
-	method: 'GET',
-	headers: {
-		'X-RapidAPI-Key': '3305c8d758msh96587b8a3306f7ep1d1bafjsn300995769472',
-		'X-RapidAPI-Host': '50k-radio-stations.p.rapidapi.com'
-	}
-};
+}
+  
+  //Radio station API optional
 
-fetch('https://50k-radio-stations.p.rapidapi.com/get/channels?keyword=a&country_id=50&page=1', options2)
-	.then(response => response.json())
-	.then(response => 
-    console.log(response))
-    let data2 = response.data
-    let html = '';
-    data.forEach(item2 => {
-      html +=  `
-       <div class="cards2">
+// let options2 = {
+// 	method: 'GET',
+// 	headers: {
+// 		'X-RapidAPI-Key': '3305c8d758msh96587b8a3306f7ep1d1bafjsn300995769472',
+// 		'X-RapidAPI-Host': '50k-radio-stations.p.rapidapi.com'
+// 	}
+// };
+
+// fetch('https://50k-radio-stations.p.rapidapi.com/get/channels?keyword=a&country_id=50&page=1', options2)
+// 	.then(response => response.json())
+// 	.then(response => 
+//     console.log(response))
+//     let data2 = response.data
+//     let html = '';
+//     data.forEach(item2 => {
+//       html +=  `
+//        <div class="cards2">
           
-      <img src=${item2.image} alt="img" class="images"></div>`;
-    });
+//       <img src=${item2.image} alt="img" class="images"></div>`;
+//     });
 
 
 
