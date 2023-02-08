@@ -1,11 +1,18 @@
 :root{
     --red: red;
+    --feb: #feb524;
+    --ee: #ee572f;
 }
 
 
 body{
-    margin: 200px;
-    background-color: #feb524;
+    margin-left: 200px;
+    margin-right: 200px;
+    background-color: var(--feb);
+}
+
+.text{
+    font-size: 1.5rem;
 }
 
 /* Container with input and search button */
@@ -42,7 +49,7 @@ input{
 }
 
 .button-search:hover{
-    background-color: #ee572f;
+    background-color: var(--ee);
 }
 
 /* What's on - header */
@@ -57,8 +64,8 @@ input{
 content: " ";
 height: 0.5rem;
 width: 100%;
-border-top: 1px solid red;
-border-bottom: 1px solid red;
+border-top: 1px solid var(--red);
+border-bottom: 1px solid var(--red);
 padding: 0;
 position: relative;
 top: 43px;
@@ -75,7 +82,7 @@ top: 43px;
     z-index: 1;
     width: 230px;
     height: 80px;
-    background-color: #feb524;
+    background-color:  var(--feb);
 }
 /* container with all cards/events */
 #root{
@@ -88,7 +95,7 @@ top: 43px;
 }
 /* cards with different events */
 .card{
-    background-color: #feb524;
+    background-color: var(--feb);
     margin-bottom: 30px;
 }
 
@@ -96,6 +103,6 @@ top: 43px;
 .name{
     display: flex;
     justify-content: center;
-    color: #ee572f;
+    color: var(--ee);
 }
 

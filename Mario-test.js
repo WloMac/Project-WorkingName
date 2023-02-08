@@ -29,7 +29,7 @@ let options = {
 // Fetch method return API entertainment data
  function events(city) {
   
-  fetch(`https://concerts-artists-events-tracker.p.rapidapi.com/location?name=${city}&minDate=2023-05-11&maxDate=2023-05-12&page=1`, options)
+  fetch(`https://concerts-artists-events-tracker.p.rapidapi.com/location?name=${city}&minDate=2023-02-09&maxDate=2023-02-10&page=1`, options)
 	.then(response => response.json())
   .then(response => {
     console.log(response.data);
@@ -57,11 +57,14 @@ let options = {
   
 }
 
+
 //Events displayed based on user city input 
 let button = document.querySelector(".button-search");
 let inputValue = document.querySelector(".inputValue");
+let inputValue2 = document.querySelector(".inputValue2");
+let inputValue3 = document.querySelector(".inputValue3");
 button.addEventListener('click', function(){
-  fetch(`https://concerts-artists-events-tracker.p.rapidapi.com/location?name=${inputValue.value}&minDate=2023-05-11&maxDate=2023-05-12&page=1`, options)
+  fetch(`https://concerts-artists-events-tracker.p.rapidapi.com/location?name=${inputValue.value}&minDate=${inputValue2.value}&maxDate=${inputValue3.value}&page=1`, options)
 	.then(response => response.json())
   .then(response => {
     console.log(response.data);
@@ -76,6 +79,7 @@ button.addEventListener('click', function(){
         <h5 class="name">${item.name}</h5>
         <p class="city">${item.location.address.addressLocality} - ${item.location.name}</p>
         <p class="date">Date: ${item.startDate.slice(0, -14)} ${item.startDate.slice(11, -8)} </p>
+       
         <a href="${item.location.sameAs}" target="_blank" class="btn btn-outline-danger">More Info</a>
       </div>
     </div>
