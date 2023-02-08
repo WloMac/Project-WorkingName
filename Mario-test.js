@@ -36,6 +36,7 @@ function events(city) {
     let html = '';
     data.forEach(item => {
       html +=  `
+      
       <div class="card" style="width: 18rem;">
       <img src=${item.image} alt="img" class="images">
       <div class="card-body">
@@ -49,9 +50,6 @@ function events(city) {
     });
     
     document.getElementById("root").innerHTML = html;
-    document.getElementById("location").innerHTML = locationName;
-document.getElementById("date").innerHTML = date;
-
   })
   .catch(err => console.error(err));
 
