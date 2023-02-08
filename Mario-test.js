@@ -11,7 +11,7 @@ function ipLocate() {
       let city = jsonresponse.city;
       events(city)
 });
-  
+
 }
 
 // Concerts - Artists Events Tracker API Documentation
@@ -26,8 +26,11 @@ let options = {
 	}
 };
 
+
+
 // Fetch method return API entertainment data
-function events(city) {
+ function events(city) {
+  
   fetch(`https://concerts-artists-events-tracker.p.rapidapi.com/location?name=${city}&minDate=2023-05-11&maxDate=2023-05-12&page=1`, options)
 	.then(response => response.json())
   .then(response => {
@@ -52,9 +55,43 @@ function events(city) {
     document.getElementById("root").innerHTML = html;
   })
   .catch(err => console.error(err));
-
-}
   
+}
+
+let button = document.querySelector(".button-search");
+let inputValue = document.querySelector(".inputValue");
+button.addEventListener('click', function(){
+  fetch(`https://concerts-artists-events-tracker.p.rapidapi.com/location?name=${inputValue.value}&minDate=2023-05-11&maxDate=2023-05-12&page=1`, options)
+	.then(response => response.json())
+  .then(response => {
+    console.log(response.data);
+    let data = response.data;
+    let html = '';
+    data.forEach(item => {
+      html +=  `
+      
+      <div class="card" style="width: 18rem;">
+      <img src=${item.image} alt="img" class="images">
+      <div class="card-body">
+        <h5 class="name">${item.name}</h5>
+        <p class="city">${item.location.address.addressLocality} - ${item.location.name}</p>
+        <p class="date">Date: ${item.startDate}</p>
+        <a href="${item.location.sameAs}" target="_blank" class="btn btn-outline-danger">More Info</a>
+      </div>
+    </div>
+      `;
+    });
+    
+    document.getElementById("root").innerHTML = html;
+  })
+  .catch(err => console.error(err));
+  
+});
+
+
+
+
+
 
 // <div class="cards">
 // <img src=${item.image} alt="img" class="images">
