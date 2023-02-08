@@ -26,8 +26,6 @@ let options = {
 	}
 };
 
-
-
 // Fetch method return API entertainment data
  function events(city) {
   
@@ -45,7 +43,7 @@ let options = {
       <div class="card-body">
         <h5 class="name">${item.name}</h5>
         <p class="city">${item.location.address.addressLocality} - ${item.location.name}</p>
-        <p class="date">Date: ${item.startDate}</p>
+        <p class="date">Date: ${item.startDate.slice(0, -14)} ${item.startDate.slice(11, -8)} </p>
         <a href="${item.location.sameAs}" target="_blank" class="btn btn-outline-danger">More Info</a>
       </div>
     </div>
@@ -53,11 +51,13 @@ let options = {
     });
     
     document.getElementById("root").innerHTML = html;
+    
   })
   .catch(err => console.error(err));
   
 }
 
+//Events displayed based on user city input 
 let button = document.querySelector(".button-search");
 let inputValue = document.querySelector(".inputValue");
 button.addEventListener('click', function(){
@@ -75,7 +75,7 @@ button.addEventListener('click', function(){
       <div class="card-body">
         <h5 class="name">${item.name}</h5>
         <p class="city">${item.location.address.addressLocality} - ${item.location.name}</p>
-        <p class="date">Date: ${item.startDate}</p>
+        <p class="date">Date: ${item.startDate.slice(0, -14)} ${item.startDate.slice(11, -8)} </p>
         <a href="${item.location.sameAs}" target="_blank" class="btn btn-outline-danger">More Info</a>
       </div>
     </div>
