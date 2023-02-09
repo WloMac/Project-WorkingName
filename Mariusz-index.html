@@ -13,11 +13,27 @@
     <link rel="stylesheet" href="./Mario-test.css">
 </head>
 <body>
+  
+    <ul class="nav mb-5 justify-content-end font-weight-bold text">
+        <li class="nav-item">
+          <a class="nav-link active" href="#">Weather</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">News</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Entertainment</a>
+        </li>
+      
+      </ul>
+
 
 <div class="container">
     <p class="events">Events by location</p>
-<input type="text" class="inputValue" placeholder="Enter city ...">
-<button class="button-search">Search</button>
+    <input type="text" class="inputValue" placeholder="Enter city ...">
+    <input type="text" class="inputValue2" placeholder="From 2023-03-01 ">
+    <input type="text" class="inputValue3" placeholder="To 2023-03-02">
+    <button class="button-search">Search</button>
 </div>
 
 <div class="container-header">
@@ -25,9 +41,24 @@
     <h1 class="header">What's on</h1>
 </div>
 
-
+<!-- hold all events in bootstrap cards -->
 <div id="root">
 </div>
+
+<!-- Weather -->
+<div class="container-header">
+    <h2 class="hr-lines"></h2>
+        <h1 class="header">Weather</h1>
+    </div>
+<!-- News -->
+    <div class="container-header">
+        <h2 class="hr-lines"></h2>
+            <h1 class="header">News</h1>
+        </div>
+
+        <div id="root2">
+        </div>
+    
 
     
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>

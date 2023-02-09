@@ -1,9 +1,21 @@
+:root{
+    --red: red;
+    --feb: #feb524;
+    --ee: #ee572f;
+}
+
 
 body{
-    margin: 200px;
-    background-color: #feb524;
+    margin-left: 200px;
+    margin-right: 200px;
+    background-color: var(--feb);
 }
-/* Container with input and search button elements */
+
+.text{
+    font-size: 1.5rem;
+}
+
+/* Container with input and search button */
 .container{
     width: 100%;
     display: flex;
@@ -12,7 +24,7 @@ body{
     
     align-items: center;
 }
-
+/* 'Events by location' header */
 .events{
     font-size: 2rem;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
@@ -22,6 +34,7 @@ input{
     box-shadow: 3px 3px;
     margin-bottom: 10px;
     padding: 6px;
+    outline: none !important; 
 }
 
 .button-search{
@@ -32,16 +45,17 @@ input{
     cursor: pointer;
     border-radius: 10px;
     box-shadow: 2px 3px;
+    outline: none !important; 
 }
+
 .button-search:hover{
-    background-color: #ee572f;
+    background-color: var(--ee);
 }
 
 /* What's on - header */
 .container-header{
     display: flex;
     flex-direction: column;
-    /* background-color: aqua; */
     width: 100%;
 }
 
@@ -50,8 +64,8 @@ input{
 content: " ";
 height: 0.5rem;
 width: 100%;
-border-top: 1px solid red;
-border-bottom: 1px solid red;
+border-top: 1px solid var(--red);
+border-bottom: 1px solid var(--red);
 padding: 0;
 position: relative;
 top: 43px;
@@ -68,25 +82,27 @@ top: 43px;
     z-index: 1;
     width: 230px;
     height: 80px;
-    background-color: #feb524;
+    background-color:  var(--feb);
 }
-
+/* container with all cards/events */
 #root{
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-evenly;
- align-items: space-evenly;
-    /* border: 1px solid black; */
+    align-items: space-evenly;
+ 
 }
+/* cards with different events */
 .card{
-    background-color: #feb524;
+    background-color: var(--feb);
     margin-bottom: 30px;
 }
 
+/* Event name */
 .name{
     display: flex;
     justify-content: center;
-    color: #ee572f;
+    color: var(--ee);
 }
 
