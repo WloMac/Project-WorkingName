@@ -240,3 +240,41 @@ header{
       transform: rotate(-15deg);
     }
   }
+
+  /* weather section*/
+  .input{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+    padding: 5px;
+}
+.inputValue{
+    width: 200px;
+    border-color: 1px solid black;
+}
+
+.button2{
+    background-color: var(--ee);
+    width: 110px;
+    height: 40px;
+    border-radius: 10px;
+    margin-top: 10px;
+    outline: none !important;
+    cursor: pointer;
+
+}
+
+.container3{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+ 
+ color: black;
+ width: 20%;
+ font-size: 1.5rem;
+    
+}
