@@ -15,28 +15,32 @@
 
 <body>
 
-
-    <header>
-        <div class="header-wrapper">
-            <nav>
-
-                <a href=""><img src="./images/logo.gif" alt="" width="150px" height="150px"></a>
-
-                <ul>
-                    <li>Greeting: Hello user from ...</li>
-                    <li id="todayWeather">Today is: </li>
-                </ul>
-            </nav>
-        </div>
-    </header>
+    <div class=" newDiv">
+        <a href=""><img src="./images/logo.gif" alt="" width="150px" height="150px"></a>
+        <header>
+            <div class="header-wrapper">
+                <nav>
+                    <ul>
+                        <li id="welcome"></li>
+                        <li id="todayWeather"></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+    </div>
 
 
 
     <div class="container">
+
+        <div id="searchHistory">Previous searches
+<p id="history"></p>
+        </div>
         <p class="events">Events by location</p>
         <input type="text" class="inputValue" placeholder="Enter city ...">
         <button class="button-search">Search</button>
     </div>
+
 
     <div class="container-header">
         <h2 class="hr-lines"></h2>
