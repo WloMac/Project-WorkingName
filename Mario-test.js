@@ -61,10 +61,9 @@ let options = {
 //Events displayed based on user city input 
 let button = document.querySelector(".button-search");
 let inputValue = document.querySelector(".inputValue");
-let inputValue2 = document.querySelector(".inputValue2");
-let inputValue3 = document.querySelector(".inputValue3");
+
 button.addEventListener('click', function(){
-  fetch(`https://concerts-artists-events-tracker.p.rapidapi.com/location?name=${inputValue.value}&minDate=${inputValue2.value}&maxDate=${inputValue3.value}&page=1`, options)
+  fetch(`https://concerts-artists-events-tracker.p.rapidapi.com/location?name=${inputValue.value}&minDate=2023-02-09&maxDate=2023-02-10&page=1`, options)
 	.then(response => response.json())
   .then(response => {
     console.log(response.data);
