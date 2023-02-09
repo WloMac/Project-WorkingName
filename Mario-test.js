@@ -103,10 +103,31 @@ function weather(lng, lat) {
     let htmlInput = '';
     htmlInput = document.getElementById("todayWeather");
     let temp = response.daily.temperature_2m_max
-    let todayDate = response.daily.time
-  
-    console.log(temp)
-      htmlInput.textContent = `Today is ${todayDate[0]},\n with highs of ${temp[0]} °C`
+    let todayDate = response.daily.time  
+    htmlInput.textContent = `Today is ${todayDate[0]},\n with highs of ${temp[0]} °C`
+
+    // let sunset = response.daily.sunset
+    // let sunrise = response.daily.sunrise  
+    // let wind = response.daily.windspeed_10m_max
+    // let forecastDate = response.daily.time
+    // let data = response.daily
+    // let html3 = '';
+    // Object.entries(data.sunset).forEach(item => {
+    //   console.log(item)
+    //   html3 +=  `
+    //     <div class="card" style="width: 18rem;>  
+    //       <div class="card-body">  
+    //         <h5 class="card-title date"> Date: ${forecastDate[item[0]]}</h5>      
+    //         <p class="card-text sunrise">Sunrise:${sunrise[item[0]]}</p>
+    //         <p class="card-text sunset">Sunset: ${sunset[item[0]]}</p>                 
+    //         <p class="card-text temp">Temp.:${temp[item[0]]}</p>
+    //         <p class="card-text wind">Wind: ${wind[item[0]]}</p>
+    //       </div>
+    //     </div>
+    //   `;
+
+    // });
+    // document.getElementById("root3").innerHTML = html3;
 
     
     
