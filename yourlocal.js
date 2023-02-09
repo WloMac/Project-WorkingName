@@ -272,14 +272,13 @@ function weather(lng, lat) {
 // }
 
 
-
+// Weather based on user city input
 let button2 = document.querySelector('.button2');
 let inputValue2 = document.querySelector('.inputValue2');
 let name = document.querySelector('.name');
 let desc = document.querySelector('.desc');
 let temp = document.querySelector('.temp');
-
-
+let icon = document.querySelector('.icon');
 
 button2.addEventListener('click', function(){
     fetch('https://api.openweathermap.org/data/2.5/weather?q='+inputValue2.value+'&units=metric&appid=732a88c6f9f8186453f47b435c9ba5f3')
@@ -289,10 +288,10 @@ button2.addEventListener('click', function(){
         let nameValue = data.name;
         let tempValue = "Temp " + data.main.temp.toFixed(1) + "°C";
         let descValue = data.weather[0].description;
-        
         name.innerHTML = nameValue;
         temp.innerHTML = tempValue;
         desc.innerHTML = descValue;
+        document.getElementById("icon").src = "https://openweathermap.org/img/wn/" + data.weather[0].icon + "@2x.png";
         
     })
 })
