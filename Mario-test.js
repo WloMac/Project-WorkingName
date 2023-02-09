@@ -6,10 +6,11 @@ function ipLocate() {
   fetch("https://ipgeolocation.abstractapi.com/v1/?api_key=5843dce2715140eca64c3152ccff5fb3")
 .then((response) => response.json())
 .then(function (jsonresponse) {
-      console.log(jsonresponse)
-      console.log(jsonresponse.city)    
+      let lng = jsonresponse.longitude;
+      let lat= jsonresponse.latitude;    
       let city = jsonresponse.city;
       events(city)
+      weather(lng, lat)
 });
 
 }
@@ -91,6 +92,26 @@ button.addEventListener('click', function(){
   
 });
 
+
+// ------------------------ Wlodek input ----------------------// 
+
+function weather(lng, lat) {
+  fetch(`https://api.open-meteo.com/v1/forecast?latitude=${lat}&longitude=${lng}&timezone=auto&daily=temperature_2m_max,precipitation_sum,windspeed_10m_max,sunrise,sunset`)
+	.then(response => response.json())
+  .then(response => {
+    let htmlInput = '';
+    htmlInput = document.getElementById("todayWeather");
+    let temp = response.daily.temperature_2m_max
+  
+    console.log(temp)
+      htmlInput.textContent = `Today: ${temp[0]} °C`
+
+    
+    
+    
+  })
+  
+}
 
 
 
