@@ -2,7 +2,7 @@ let welcomeCity = document.getElementById("welcome");
 let searchedHistoryArray =
   JSON.parse(localStorage.getItem("searchHistoryLocal")) || [];
 
-// Wlodek's Input - Location based on IP
+
 ipLocate();
 render();
 function render() {
@@ -43,6 +43,7 @@ function displayBannerInfo(city) {
   welcomeCity.innerHTML = welcomeMessage;
 }
 
+// Wlodek's Input - Location based on IP
 function ipLocate() {
   fetch(
     "https://ipgeolocation.abstractapi.com/v1/?api_key=5843dce2715140eca64c3152ccff5fb3"
@@ -54,10 +55,10 @@ function ipLocate() {
       let city = jsonresponse.city;
       events(city);
       weather(lng, lat);
-      let welcomeMessage = "Welcome from " + city;
+      let welcomeMessage = "Welcome from " + city + "!";
       welcomeCity.innerHTML = welcomeMessage;
 
-      let todayWeatherMessage = "your temperature today is: ";
+      
     });
 }
 
@@ -173,7 +174,7 @@ function weather(lng, lat) {
       htmlInput = document.getElementById("todayWeather");
       let temp = response.daily.temperature_2m_max;
       let todayDate = response.daily.time;
-      htmlInput.textContent = `your temperature today is: "  ${temp[0]} °C`;
+      htmlInput.textContent = `Your temperature today is: ${temp[0]} °C`;
 
       // let sunset = response.daily.sunset
       // let sunrise = response.daily.sunrise
