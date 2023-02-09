@@ -99,12 +99,14 @@ function weather(lng, lat) {
   fetch(`https://api.open-meteo.com/v1/forecast?latitude=${lat}&longitude=${lng}&timezone=auto&daily=temperature_2m_max,precipitation_sum,windspeed_10m_max,sunrise,sunset`)
 	.then(response => response.json())
   .then(response => {
+    console.log(response)
     let htmlInput = '';
     htmlInput = document.getElementById("todayWeather");
     let temp = response.daily.temperature_2m_max
+    let todayDate = response.daily.time
   
     console.log(temp)
-      htmlInput.textContent = `Today: ${temp[0]} °C`
+      htmlInput.textContent = `Today is ${todayDate[0]},\n with highs of ${temp[0]} °C`
 
     
     
