@@ -1,0 +1,179 @@
+:root{
+    --red: red;
+    --feb: #feb524;
+    --ee: #ee572f;
+}
+
+
+body{
+    /* margin-left: 200px;
+    margin-right: 200px; */
+    background-color: var(--feb);
+}
+
+.text{
+    font-size: 1.5rem;
+}
+
+/* Container with input and search button */
+.container{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    
+    align-items: center;
+}
+/* 'Events by location' header */
+.events{
+    font-size: 2rem;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    margin-top: 100px;
+}
+
+input{
+    box-shadow: 3px 3px;
+    margin-bottom: 10px;
+    padding: 6px;
+    outline: none !important; 
+}
+
+.button-search{
+    width: 100px;
+    height: 30px;
+    padding: 0;
+    margin: 0;
+    cursor: pointer;
+    border-radius: 10px;
+    box-shadow: 2px 3px;
+    outline: none !important; 
+}
+
+.button-search:hover{
+    background-color: var(--ee);
+}
+
+/* What's on - header */
+.container-header{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+/* horizontal lines */
+.hr-lines{
+content: " ";
+height: 0.5rem;
+width: 100%;
+border-top: 1px solid var(--red);
+border-bottom: 1px solid var(--red);
+padding: 0;
+position: relative;
+top: 43px;
+}
+
+.header{
+    display: flex;
+    justify-content: center;
+    position: relative;
+    left: 135px;
+    padding: 0;
+    margin: 0;
+    font-size: 3rem;
+    z-index: 1;
+    width: 230px;
+    height: 80px;
+    background-color:  var(--feb);
+}
+/* container with all cards/events */
+#root{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: space-evenly;
+ 
+}
+/* cards with different events */
+.card{
+    /* background-color: var(--feb); */
+    margin-bottom: 30px;
+}
+
+/* Event name */
+.name{
+    display: flex;
+    justify-content: center;
+    color: var(--ee);
+}
+
+
+
+/*  Giovanni style */
+header{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    background-color: #df5758;
+    color: #fff;
+    text-decoration: underline;
+    text-decoration-color: #f6dd64;
+    text-decoration-thickness: 3px;
+    text-underline-offset: 3px;
+  }
+  nav{
+      display: flex;
+      /* border: 1px solid black;
+      box-shadow: 0 2px 2px -2px rgba(0,0,0,.2); */
+      padding: 40px;
+      width: 100%;
+  }
+  nav:after {
+      content: "";
+      display: block;
+      clear: both;
+  }
+  ul{
+  display: flex;
+}
+  ul li{
+      justify-content: space-between;
+      list-style: none;
+      padding: 0 20px;
+  }
+  .container{
+      display: flex;
+  }
+  .section1, .section2{
+      width: 50%;
+      height: 1000px;
+      border-right: #df5758 5px solid;
+  }
+  .section1a, .section2, .section3, .section4{
+      justify-content: center;
+      align-items: center;
+      display: flex;
+      text-align: center;
+  }
+  .section2{
+      background-color: white;
+  }
+  .section1a{
+      background-color: white;
+      height: 50%;
+      border-bottom: #df5758 5px solid;
+  }
+  .section34{
+      display: flex;
+      height: 50%;
+  }
+  .section3{
+      background-color: white;
+      width: 50%;
+      border-right: #df5758 5px solid;
+  }
+  .section4{
+      background-color: white;
+      width: 50%;
+  }
