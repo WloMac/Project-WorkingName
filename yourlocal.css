@@ -160,6 +160,27 @@ header{
       font-size: 30px;
   }
 
+  @media (max-width: 1049px){
+    nav{
+      font-size: 1.5rem;
+  }
+  }
+
+  @media (max-width: 904px){
+    nav{
+      font-size: 1.3rem;
+  }
+  }
+  
+@media (max-width: 600px){
+  nav{
+    font-size: 1.1rem;
+}
+ul{
+  flex-direction: column;
+}
+}
+
   nav:after {
       content: "";
       display: block;
