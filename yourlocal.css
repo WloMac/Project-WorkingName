@@ -8,6 +8,10 @@ body{
   background-color: var(--feb);
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 .text{
     font-size: 1.5rem;
 }
