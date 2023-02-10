@@ -303,3 +303,13 @@ ul{
  font-size: 1.5rem;
     
 }
+
+@media(max-width: 835px){
+.container3{
+  flex-direction: row;
+}
+.desc, .temp{
+  font-size: 1rem;
+  padding: 5px;
+}
+}
