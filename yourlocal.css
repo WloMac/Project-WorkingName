@@ -4,11 +4,12 @@
     --ee: #ee572f;
 }
 
-
 body{
-    /* margin-left: 200px;
-    margin-right: 200px; */
-    background-color: var(--feb);
+  background-color: var(--feb);
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 .text{
@@ -21,24 +22,25 @@ body{
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    
     align-items: center;
-}
-/* 'Events by location' header */
-.events{
+    /* background-color: aliceblue; */
+  }
+
+  /* 'Events by location' header */
+  .events{
     font-size: 2rem;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     margin-top: 100px;
-}
-
-input{
+  }
+  
+  input{
     box-shadow: 3px 3px;
     margin-bottom: 10px;
     padding: 6px;
     outline: none !important; 
-}
+  }
 
-.button-search{
+  .button-search{
     width: 100px;
     height: 30px;
     padding: 0;
@@ -51,6 +53,30 @@ input{
 
 .button-search:hover{
     background-color: var(--ee);
+}
+
+img{
+  float: left;
+}
+
+#searchHistory{
+display: flex;
+flex-direction: column;
+align-items: center;
+margin-top: 20px;
+}
+
+#history{
+display: flex;
+flex-direction: row;
+flex-wrap: wrap;
+  justify-content: space-around;
+  height: 25px;
+}
+#history p{
+  padding-right: 5px;
+  padding-left: 5px;
+  border-top: 1px solid var(--ee)
 }
 
 /* What's on - header */
@@ -72,19 +98,24 @@ position: relative;
 top: 43px;
 }
 
+.newDiv{
+  display: flex;
+}
+
 .header{
-    display: flex;
-    justify-content: center;
-    position: relative;
-    left: 135px;
-    padding: 0;
-    margin: 0;
-    font-size: 3rem;
-    z-index: 1;
-    width: 230px;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  left: 135px;
+  padding: 0;
+  margin: 0;
+  font-size: 3rem;
+  z-index: 1;
+  width: 230px;
     height: 80px;
     background-color:  var(--feb);
 }
+
 /* container with all cards/events */
 #root{
     display: flex;
@@ -92,11 +123,12 @@ top: 43px;
     flex-wrap: wrap;
     justify-content: space-evenly;
     align-items: space-evenly;
- 
-}
+    margin-left: 150px;
+    margin-right: 150px;
+  }
+
 /* cards with different events */
 .card{
-    /* background-color: var(--feb); */
     margin-bottom: 30px;
 }
 
@@ -107,76 +139,73 @@ top: 43px;
     color: var(--ee);
 }
 
-
-
 /*  Giovanni style */
 header{
     display: flex;
     align-items: center;
     justify-content: center;
     width: 100%;
-    background-color: #df5758;
+    height: 150px;
+    background-color: #fe5555;
     color: #fff;
     text-decoration: underline;
     text-decoration-color: #f6dd64;
     text-decoration-thickness: 3px;
     text-underline-offset: 3px;
   }
+
   nav{
       display: flex;
       /* border: 1px solid black;
       box-shadow: 0 2px 2px -2px rgba(0,0,0,.2); */
       padding: 40px;
       width: 100%;
+      align-items: center;
+      float: right;
+      font-size: 30px;
   }
+
+  @media (max-width: 1049px){
+    nav{
+      font-size: 1.5rem;
+  }
+  }
+
+  @media (max-width: 904px){
+    nav{
+      font-size: 1.3rem;
+  }
+  }
+  
+@media (max-width: 600px){
+  nav{
+    font-size: 1.1rem;
+}
+ul{
+  flex-direction: column;
+}
+}
+
   nav:after {
       content: "";
       display: block;
       clear: both;
   }
+
   ul{
   display: flex;
 }
+
   ul li{
       justify-content: space-between;
       list-style: none;
-      padding: 0 20px;
+     padding: 5px;
   }
+
   .container{
       display: flex;
   }
-  .section1, .section2{
-      width: 50%;
-      height: 1000px;
-      border-right: #df5758 5px solid;
-  }
-  .section1a, .section2, .section3, .section4{
-      justify-content: center;
-      align-items: center;
-      display: flex;
-      text-align: center;
-  }
-  .section2{
-      background-color: white;
-  }
-  .section1a{
-      background-color: white;
-      height: 50%;
-      border-bottom: #df5758 5px solid;
-  }
-  .section34{
-      display: flex;
-      height: 50%;
-  }
-  .section3{
-      background-color: white;
-      width: 50%;
-      border-right: #df5758 5px solid;
-  }
-  .section4{
-      background-color: white;
-      width: 50%;
-  }
+ 
   footer ul {
     display: inline-grid;
     grid-auto-flow: row;
@@ -237,3 +266,51 @@ header{
       transform: rotate(-15deg);
     }
   }
+
+  /* weather section*/
+  .input{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+    padding: 5px;
+}
+.inputValue{
+    width: 200px;
+    border-color: 1px solid black;
+}
+
+.button2{
+    background-color: var(--ee);
+    width: 110px;
+    height: 40px;
+    border-radius: 10px;
+    margin-top: 10px;
+    outline: none !important;
+    cursor: pointer;
+
+}
+
+.container3{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+ 
+ color: black;
+ width: 20%;
+ font-size: 1.5rem;
+    
+}
+
+@media(max-width: 835px){
+.container3{
+  flex-direction: row;
+}
+.desc, .temp{
+  font-size: 1rem;
+  padding: 5px;
+}
+}
