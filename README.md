@@ -1,4 +1,4 @@
-# Project - Your Local
+# Your Local!
 
 ## User story:
 
@@ -21,16 +21,17 @@ This page incorporates the use of different API's on a complete site which allow
 ## Website layout
 
 Welcome section:
-<img src="https://github.com/WloMac/Sam-Wlodek-Mariusz-Gio-Project-WorkingName/blob/newsam/Mariusz-img/Screenshot%202023-02-10%20at%2010.42.42.png">
-
+<p align="center">
+<img src="https://github.com/WloMac/Sam-Wlodek-Mariusz-Gio-Project-WorkingName/blob/newsam/Mariusz-img/Screenshot%202023-02-10%20at%2010.42.42.png?raw=true"/>
+</p>
 Website Navbar:
 <p align="center">
-  <img src="https://github.com/WloMac/Sam-Wlodek-Mariusz-Gio-Project-WorkingName/blob/newsam/Mariusz-img/Screenshot%202023-02-10%20at%2010.43.09.png") />
+  <img src="https://github.com/WloMac/Sam-Wlodek-Mariusz-Gio-Project-WorkingName/blob/newsam/Mariusz-img/Screenshot%202023-02-10%20at%2010.43.09.png?raw=true" />
 </p>
 
 Events based on user city input:
 <p align="center">
-  <img src="https://github.com/WloMac/Sam-Wlodek-Mariusz-Gio-Project-WorkingName/blob/newsam/Mariusz-img/Screenshot%202023-02-10%20at%2010.43.19.png" />
+  <img src="https://github.com/WloMac/Sam-Wlodek-Mariusz-Gio-Project-WorkingName/blob/newsam/Mariusz-img/Screenshot%202023-02-10%20at%2010.43.19.png?raw=true" />
 </p>
 
 Search history:
