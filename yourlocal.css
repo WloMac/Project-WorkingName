@@ -8,6 +8,10 @@ body{
   background-color: var(--feb);
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 .text{
     font-size: 1.5rem;
 }
@@ -161,6 +165,27 @@ header{
       font-size: 30px;
   }
 
+  @media (max-width: 1049px){
+    nav{
+      font-size: 1.5rem;
+  }
+  }
+
+  @media (max-width: 904px){
+    nav{
+      font-size: 1.3rem;
+  }
+  }
+  
+@media (max-width: 600px){
+  nav{
+    font-size: 1.1rem;
+}
+ul{
+  flex-direction: column;
+}
+}
+
   nav:after {
       content: "";
       display: block;
@@ -278,4 +303,14 @@ header{
  width: 20%;
  font-size: 1.5rem;
     
+}
+
+@media(max-width: 835px){
+.container3{
+  flex-direction: row;
+}
+.desc, .temp{
+  font-size: 1rem;
+  padding: 5px;
+}
 }
