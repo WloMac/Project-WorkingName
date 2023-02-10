@@ -4,7 +4,7 @@
 
 As a news-hungry individual who is always on the go, I want to have access to a website with an API that provides me with the latest local news, entertainment, and weather updates based on my current location. This way, I can stay informed about what's happening around me and plan my day accordingly, without having to search for information from multiple sources. The website should be user-friendly, and the API should be easy to use and integrate into my other applications.
 
-# API's
+## API's
 IP location API:
 https://ipgeolocation.abstractapi.com/
 
@@ -71,7 +71,20 @@ Weather based on IP location:
 
 As aformentioned, This page uses many APIs across the whole site, enabling users to submit their information, have their location pinpointed, and get the local news. A colour scheme and typefaces that are more appealing and "fun" were chosen to enable for a more user-tailored experience, improving mental engagement and recall. They will get access to the website, which gives them the most recent information on local news, entertainment, and weather based on where they are. keeping up with local events so they may organise their day properly without having to look up information from many sources.
 
- ## Project contributors: 
+<br>
+<br>
+## Deployed Links
+
+GitHub repository: https://github.com/WloMac/Sam-Wlodek-Mariusz-Gio-Project-WorkingName
+
+Deployed website: https://wlomac.github.io/Sam-Wlodek-Mariusz-Gio-Project-WorkingName/
+
+
+
+<br>
+<br>
+
+## Project contributors: 
  Team working on this app:
      
      https://github.com/Gioedx
@@ -84,7 +97,7 @@ As aformentioned, This page uses many APIs across the whole site, enabling users
      
      Teaching Assistant: Martin William
      
- # Future contribution:
+## Future contribution:
      
      If you would like to contribute to the development of this project, feel free to submit a pull request with your proposed changes.
 
