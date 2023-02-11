@@ -1,7 +1,7 @@
+//Welcome section
 let welcomeCity = document.getElementById("welcome");
 let searchedHistoryArray =
   JSON.parse(localStorage.getItem("searchHistoryLocal")) || [];
-
 
 ipLocate();
 render();
@@ -25,6 +25,7 @@ function render() {
   }
 }
 
+//Search history function
 function saveCityHistory(citySearchedFor) {
   if (searchedHistoryArray.length > 5) {
     searchedHistoryArray.unshift([citySearchedFor]);
