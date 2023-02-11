@@ -77,7 +77,7 @@ let options = {
 // Fetch method return API entertainment data
 function events(city) {
   fetch(
-    `https://concerts-artists-events-tracker.p.rapidapi.com/location?name=${city}&minDate=2023-02-09&maxDate=2023-02-10&page=1`,
+    `https://concerts-artists-events-tracker.p.rapidapi.com/location?name=${city}&minDate=2023-02-09&maxDate=2023-12-31&page=1`,
     options
   )
     .then((response) => response.json())
@@ -120,7 +120,7 @@ button.addEventListener("click", function () {
   let citySearchedFor = inputValue.value;
   saveCityHistory(citySearchedFor);
   fetch(
-    `https://concerts-artists-events-tracker.p.rapidapi.com/location?name=${inputValue.value}&minDate=2023-02-09&maxDate=2023-02-10&page=1`,
+    `https://concerts-artists-events-tracker.p.rapidapi.com/location?name=${inputValue.value}&minDate=2023-02-09&maxDate=2023-12-31&page=1`,
     options
   )
     .then((response) => response.json())
