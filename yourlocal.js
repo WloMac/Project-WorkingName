@@ -56,6 +56,7 @@ function ipLocate() {
       let city = jsonresponse.city;
       events(city);
       weather(lng, lat);
+      news(city)
       let welcomeMessage = "Welcome from " + city + "!";
       welcomeCity.innerHTML = welcomeMessage;
 
@@ -180,6 +181,37 @@ function weather(lng, lat) {
      
     });
 }
+
+function news(city) {
+  fetch(`https://newsapi.org/v2/everything?q=${city}&from=2023-02-01&sortBy=publishedAt&apiKey=429d3483717a4b48b7f79203ade739d4`)
+	.then(response => response.json())
+  .then(response => {
+    console.log(response)
+    let data = response.articles;
+    let html2 = '';
+    console.log(data)
+    for (let i = 0; i < 5; i++) {
+      const element = data[i];
+      html2 +=  `
+        <div class="card">   
+          <div class="card-header">       
+          <h3 class="title">${data[i].title}</h3>
+          </div>
+          <div class="card-body">
+          <p class="date">Date: ${data[i].publishedAt}</p>  
+          <p><a href="${data[i].url}" class="btn btn-outline-danger">More</a></p>               
+          </div>  
+        </div>
+      `;
+    }
+    
+    document.getElementById("newsContent").innerHTML = html2;
+  
+  })
+  .catch(err => console.error(err));
+
+}
+
 
 // <div class="cards">
 // <img src=${item.image} alt="img" class="images">
