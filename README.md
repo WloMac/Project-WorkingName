@@ -75,9 +75,9 @@ As aformentioned, This page uses many APIs across the whole site, enabling users
 <br>
 ## Deployed Links
 
-GitHub repository: https://github.com/WloMac/Sam-Wlodek-Mariusz-Gio-Project-WorkingName
+GitHub repository: https://github.com/WloMac/YourLocal
 
-Deployed website: https://wlomac.github.io/Sam-Wlodek-Mariusz-Gio-Project-WorkingName/
+Deployed website: https://wlomac.github.io/YourLocal/
 
 
 
