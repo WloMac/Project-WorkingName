@@ -121,6 +121,7 @@ let inputValue = document.querySelector(".inputValue");
 button.addEventListener("click", function () {
   let citySearchedFor = inputValue.value;
   saveCityHistory(citySearchedFor);
+  news(citySearchedFor)
   fetch(
     `https://concerts-artists-events-tracker.p.rapidapi.com/location?name=${inputValue.value}&minDate=2023-02-09&maxDate=2023-12-31&page=1`,
     options
@@ -193,7 +194,7 @@ function news(city) {
     for (let i = 0; i < 5; i++) {
       const element = data[i];
       html2 +=  `
-        <div class="card">   
+        <div class="card" style="width: 75%;">   
           <div class="card-header">       
           <h3 class="title">${data[i].title}</h3>
           </div>
