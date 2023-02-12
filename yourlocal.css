@@ -130,6 +130,13 @@ top: 43px;
 /* cards with different events */
 .card{
     margin-bottom: 30px;
+    transition: all 0.3s;
+    box-shadow: 2.5px 3px #7e3838
+    
+}
+.card:hover {
+  transform: scale(1.03);
+  box-shadow: 7px 7px #7e3838;
 }
 
 /* Event name */
