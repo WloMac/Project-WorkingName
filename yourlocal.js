@@ -177,28 +177,7 @@ function weather(lng, lat) {
       let todayDate = response.daily.time;
       htmlInput.textContent = `Your temperature today is: ${temp[0]} °C`;
 
-      // let sunset = response.daily.sunset
-      // let sunrise = response.daily.sunrise
-      // let wind = response.daily.windspeed_10m_max
-      // let forecastDate = response.daily.time
-      // let data = response.daily
-      // let html3 = '';
-      // Object.entries(data.sunset).forEach(item => {
-      //   console.log(item)
-      //   html3 +=  `
-      //     <div class="card" style="width: 18rem;>
-      //       <div class="card-body">
-      //         <h5 class="card-title date"> Date: ${forecastDate[item[0]]}</h5>
-      //         <p class="card-text sunrise">Sunrise:${sunrise[item[0]]}</p>
-      //         <p class="card-text sunset">Sunset: ${sunset[item[0]]}</p>
-      //         <p class="card-text temp">Temp.:${temp[item[0]]}</p>
-      //         <p class="card-text wind">Wind: ${wind[item[0]]}</p>
-      //       </div>
-      //     </div>
-      //   `;
-
-      // });
-      // document.getElementById("root3").innerHTML = html3;
+     
     });
 }
 
@@ -212,65 +191,6 @@ function weather(lng, lat) {
 // </div>
 
 //<p class="description">Description: ${item.description}</p>
-
-// Code copied from Wlodek-test.js -----------------------------------------------------------------------------------------------------
-
-// function news(city) {
-//   fetch(`https://newsapi.org/v2/everything?q=${city}&from=2023-02-01&sortBy=publishedAt&apiKey=429d3483717a4b48b7f79203ade739d4`)
-// 	.then(response => response.json())
-//   .then(response => {
-//     console.log(response)
-//     let data = response.articles;
-//     let html2 = '';
-//     data.forEach(item => {
-//       html2 +=  `
-//         <div class="cards">
-//           <h2 class="title">${item.title}</h2>
-//           <p class="date">Date: ${item.publishedAt}</p>
-//           <p>More:<a class="description" href="${item.url}">${item.url}</a></p>
-//         </div>
-//       `;
-
-//     });
-//     document.getElementById("root2").innerHTML = html2;
-
-//   })
-//   .catch(err => console.error(err));
-
-// function weather(lng, lat) {
-//   fetch(`https://api.open-meteo.com/v1/forecast?latitude=${lat}&longitude=${lng}&timezone=auto&daily=temperature_2m_max,precipitation_sum,windspeed_10m_max,sunrise,sunset`)
-// 	.then(response => response.json())
-//   .then(response => {
-//     console.log(response.daily)
-//     console.log(response.daily.sunrise)
-//     console.log(response.daily.sunset)
-//     let sunset = response.daily.sunset
-//     let sunrise = response.daily.sunrise
-//     let temp = response.daily.temperature_2m_max
-//     let wind = response.daily.windspeed_10m_max
-//     let forecastDate = response.daily.time
-//     let data = response.daily
-//     let html3 = '';
-//     Object.entries(data.sunset).forEach(item => {
-//       console.log(item)
-//       html3 +=  `
-//         <div class="card" style="width: 18rem;>
-//           <div class="card-body">
-//             <h5 class="card-title date"> Date: ${forecastDate[item[0]]}</h5>
-//             <p class="card-text sunrise">Sunrise:${sunrise[item[0]]}</p>
-//             <p class="card-text sunset">Sunset: ${sunset[item[0]]}</p>
-//             <p class="card-text temp">Temp.:${temp[item[0]]}</p>
-//             <p class="card-text wind">Wind: ${wind[item[0]]}</p>
-//           </div>
-//         </div>
-//       `;
-
-//     });
-//     document.getElementById("root3").innerHTML = html3;
-
-//   })
-
-// }
 
 
 // Weather based on user city input
