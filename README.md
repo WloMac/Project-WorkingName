@@ -11,8 +11,14 @@ https://ipgeolocation.abstractapi.com/
 Entertainment API:
 https://rapidapi.com/
 
-Local weather API:
+Local weather API based on IP location:
 https://api.open-meteo.com/
+
+User city input weather API
+https://api.openweathermap.org
+
+News API
+https://gnews.io
 
 ## Description
 
@@ -69,7 +75,7 @@ Weather based on IP location:
  
 ## Usage
 
-As aformentioned, This page uses many APIs across the whole site, enabling users to submit their information, have their location pinpointed, and get the local news. A colour scheme and typefaces that are more appealing and "fun" were chosen to enable for a more user-tailored experience, improving mental engagement and recall. They will get access to the website, which gives them the most recent information on local news, entertainment, and weather based on where they are. keeping up with local events so they may organise their day properly without having to look up information from many sources.
+As aforementioned, this page uses many APIs across the whole site, enabling users to submit their information, have their location pinpointed, and get the local news. A colour scheme and typefaces that are more appealing and "fun" were chosen to enable for a more user-tailored experience, improving mental engagement and recall. They will get access to the website, which gives them the most recent information on local news, entertainment, and weather based on where they are. Keeping up with local events so they may organise their day properly without having to look up information from many sources.
 
 <br>
 <br>
@@ -77,7 +83,9 @@ As aformentioned, This page uses many APIs across the whole site, enabling users
 
 GitHub repository: https://github.com/WloMac/YourLocal
 
+
 Deployed website: https://wlomac.github.io/YourLocal/
+
 
 
 
