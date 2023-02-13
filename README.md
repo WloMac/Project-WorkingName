@@ -83,8 +83,8 @@ As aforementioned, this page uses many APIs across the whole site, enabling user
 
 GitHub repository: https://github.com/WloMac/YourLocal
 
-Deployed website: https://wlomac.github.io/YourLocal/
 
+Deployed website: https://wlomac.github.io/YourLocal/
 
 
 
