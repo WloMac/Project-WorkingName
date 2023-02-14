@@ -64,6 +64,8 @@ display: flex;
 flex-direction: column;
 align-items: center;
 margin-top: 20px;
+
+
 }
 
 #history{
@@ -299,6 +301,25 @@ ul{
 
 }
 
+.newButton {
+  /* background: #fe5555; */
+ background: black;
+  color: #fff;
+  width: 100px;
+  margin: 5px;
+  border-radius: 10px;
+  border: 1px solid blue;
+  transform: scale(1.03);
+  transition: .3s;
+}
+
+
+.newButton:hover {
+/* background-color: lightblue; */
+background-color: #fe5555;
+
+color: black;
+}
 .container3{
     display: flex;
     flex-direction: column;
