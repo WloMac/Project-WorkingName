@@ -36,6 +36,11 @@ html {
     /* background-color: aliceblue; */
   }
 
+  .images{
+    background-image: url(./images/actionvance.jpeg);
+    background-size: cover ;
+  }
+
   /* 'Events by location' header */
   .events{
     font-size: 2rem;
