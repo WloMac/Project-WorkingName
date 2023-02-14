@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@800&display=swap');
+
 :root{
     --red: red;
     --feb: #feb524;
@@ -7,6 +9,7 @@
 
 body{
   background-color: var(--feb);
+  
 }
 
 html {
@@ -16,7 +19,9 @@ html {
 .text{
     font-size: 1.5rem;
 }
-
+#font{
+  font-family: 'League Spartan', sans-serif;
+}
 .h1.header{
   color: var(--wh); 
 }
@@ -178,6 +183,19 @@ header{
       font-size: 30px;
   }
 
+  .nav-item{
+    background-color: #fe5555;
+    border: 5px;
+    border-color: #feb524;
+    font: var(--wh)
+  }
+  .nav-item a{
+    color: white
+  }
+  .nav-item:hover{
+    background-color: #f97272;
+
+  }
   
   @media (max-width: 1049px){
     nav{
