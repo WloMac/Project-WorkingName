@@ -20,6 +20,13 @@ a{
   color: #00337C;
 }
 
+/* image swap if API events image is transparent */
+.images{
+  background-image: url(./images/actionvance.jpeg);
+  background-size: cover;
+
+}
+
 /* Container with input and search button */
 .container{
     width: 100%;
