@@ -82,7 +82,7 @@ function events(city) {
   )
     .then((response) => response.json())
     .then((response) => {
-      console.log(response.data);
+     
       let data = response.data;
       let html = "";
       data.forEach((item) => {
@@ -108,7 +108,7 @@ function events(city) {
 
       document.getElementById("root").innerHTML = html;
     })
-    .catch((err) => console.error(err));
+    
 }
 
 //Events displayed based on user city input
@@ -125,7 +125,7 @@ button.addEventListener("click", function () {
   )
     .then((response) => response.json())
     .then((response) => {
-      console.log(response.data);
+      
       let data = response.data;
       let html = "";
       data.forEach((item) => {
@@ -157,7 +157,7 @@ button.addEventListener("click", function () {
 
       document.getElementById("root").innerHTML = html;
     })
-    .catch((err) => console.error(err));
+    
 });
 
 // Weather API based on user city input 
@@ -172,7 +172,7 @@ button2.addEventListener('click', function(){
     fetch('https://api.openweathermap.org/data/2.5/weather?q='+inputValue2.value+'&units=metric&appid=732a88c6f9f8186453f47b435c9ba5f3')
     .then(response => response.json())
     .then(data => {
-        console.log(data)
+        
         let nameValue = data.name;
         let tempValue = "Temp " + data.main.temp.toFixed(1) + "°C";
         let descValue = data.weather[0].description;
@@ -192,7 +192,7 @@ function weather(lng, lat) {
   )
     .then((response) => response.json())
     .then((response) => {
-      console.log(response);
+     
       let htmlInput = "";
       htmlInput = document.getElementById("todayWeather");
       let temp = response.daily.temperature_2m_max;
@@ -206,10 +206,10 @@ function news(city) {
   fetch(`https://gnews.io/api/v4/search?q=example&lang=en&${city}=us&max=10&apikey=2e7a023c0e31506f9945a4fc2eedac41`)
 	.then(response => response.json())
   .then(response => {
-    console.log(response)
+   
     let data = response.articles;
     let html2 = '';
-    console.log(data)
+  
     for (let i = 0; i < 5; i++) {
       const element = data[i];
       html2 +=  `
@@ -228,7 +228,7 @@ function news(city) {
     }
     document.getElementById("newsContent").innerHTML = html2;
   })
-  .catch(err => console.error(err));
+ 
 }
 
 
