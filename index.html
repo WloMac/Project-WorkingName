@@ -16,6 +16,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@800&display=swap" rel="stylesheet">
+    <!-- Font awsome -->
+    <script src="https://kit.fontawesome.com/c1f2169c62.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
@@ -27,7 +29,7 @@
         <header>
             <div class="header-wrapper">
                 <nav>
-                    <ul id="font">
+                    <ul class="todayWeather">
                         <li id="welcome"></li>
                         <li id="todayWeather"></li>
                     </ul>
@@ -44,16 +46,16 @@
         <div class="col-12">
 <ul class="nav justify-content-end">
     <li class="nav-item">
-      <a class="nav-link active" href="#Entertainment" id="font">Entertainment</a>
+      <a class="nav-link" href="#Entertainment"><i class="fa-solid fa-volume-high"></i> Entertainment</a>
     </li>
     <li class="nav-item">
-      <a class="nav-link" href="#Weather" id="font">Weather</a>
+      <a class="nav-link" href="#Weather"><i class="fa-solid fa-umbrella"></i> Weather</a>
     </li>
     <li class="nav-item">
-      <a class="nav-link" href="#News" id="font">News</a>
+      <a class="nav-link" href="#News"><i class="fa-regular fa-newspaper"></i> News</a>
     </li>
     <li class="nav-item">
-      <a class="nav-link" href="#Contact" id="font">Contact</a>
+      <a class="nav-link" href="#Contact"><i class="fa-regular fa-address-book"></i> Contact</a>
     </li>
   </ul>
 </div>
@@ -79,7 +81,7 @@
 <section>
     <div class="container-header">
         <h2 class="hr-lines"></h2>
-        <h1 class="header" id="font">What's on</h1>
+        <h1 class="header">What's on</h1>
     </div>
 </section>
 <!-- End of section title -->
@@ -95,9 +97,9 @@
 <section>
     <div class="container-header" id="Weather">
         <h2 class="hr-lines"></h2>
-        <h1 class="header" id="font">Weather</h1>
+        <h1 class="header">Weather</h1>
 <div class="input">
-    <h1 id="font">Enter city name:</h1>
+    <h1>Enter city name:</h1>
     <input type="text" class="inputValue2" placeholder="Enter city">
     <button type="submit" value="submit" class="button2">Search</button>
     <div class="container3">
@@ -115,7 +117,7 @@
     <section>
     <div class="container-header" id="News">
         <h2 class="hr-lines"></h2>
-        <h1 class="header" id="font">News</h1>
+        <h1 class="header">News</h1>
     </div>
     <div class="row justify-content-center" id="newsContent"></div>
 </section>
