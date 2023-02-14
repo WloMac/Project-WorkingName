@@ -203,7 +203,7 @@ function weather(lng, lat) {
 
 // News API
 function news(city) {
-  fetch(`https://gnews.io/api/v4/search?q=example&lang=en&${city}=us&max=10&apikey=2e7a023c0e31506f9945a4fc2eedac41`)
+  fetch(`https://gnews.io/api/v4/search?q=example&lang=en&${city}=us&max=10&apikey=f39b07a04d0b83c6a72db9a261d55526`)
 	.then(response => response.json())
   .then(response => {
    
