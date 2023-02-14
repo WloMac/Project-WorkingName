@@ -16,6 +16,10 @@ html {
     font-size: 1.5rem;
 }
 
+a{
+  color: #00337C;
+}
+
 /* Container with input and search button */
 .container{
     width: 100%;
