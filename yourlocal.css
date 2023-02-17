@@ -1,7 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@600&display=swap');
+
 :root{
-  --red: red;
-  --feb: #feb524;
-  --ee: #ee572f;
+    --red: red;
+    --feb: #feb524;
+    --ee: #ee572f;
+    --wh: white;
 }
 
 body{
@@ -68,15 +71,32 @@ border-bottom: 5px solid #fe5858;
 
 
 
+/* Part of the header */
+.todayWeather{
+  color: var(--wh);
+  font-family: 'League Spartan', sans-serif;
+  font-size: 28px;
+}
+
+h1.header{
+  color: var(--wh);
+  font-family: 'League Spartan', sans-serif;
+}
+
 /* Container with input and search button */
 .container{
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: center;
- 
-}
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    /* background-color: aliceblue; */
+  }
+
+  .images{
+    background-image: url(./images/actionvance.jpeg);
+    background-size: cover ;
+  }
 
 /* 'Events by location' header */
 .events{
@@ -442,3 +462,30 @@ flex-direction: row;
 /* padding: 5px; */
 /* } */
 /* } */
+
+/* News API */
+.images2{
+width: 50%;
+  object-fit: cover;
+  margin-right: 10px;
+}
+.title2{
+  font-size: 1.1rem;
+}
+
+/* Arrow takes user to the top of the page */
+.arrow{
+  position: fixed;
+  width: 50px;
+  height: 30px;
+  rotate: -90deg;
+  mix-blend-mode: multiply;
+  bottom: 30px;
+  right: 10px;
+}
+
+#newsContent{
+  position: relative;
+  top: 30px; 
+  margin-bottom: 50px;
+}
