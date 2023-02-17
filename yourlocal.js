@@ -126,12 +126,18 @@ let inputValue = document.querySelector(".inputValue");
 
 button.addEventListener("click", function () {
   let citySearchedFor = inputValue.value;
+  
   getData(citySearchedFor);
+  
 });
 
 historyBtn.addEventListener("click", function (event) {
   let citySearchedFor = event.target.innerHTML;
   console.log(citySearchedFor);
+
+  // document.getElementById("todayWeather").innerHTML = "";
+
+        
   getData(citySearchedFor);
 });
 
@@ -171,9 +177,9 @@ function getData(citySearchedFor) {
       </div>
     </div>
       `;
-        let welcomeMessage = "Your chosen city is " + inputValue.value;
-        welcomeCity.innerHTML = welcomeMessage;
-        document.getElementById("todayWeather").innerHTML = "";
+        // let welcomeMessage = "Your chosen city is " + inputValue.value;
+        // welcomeCity.innerHTML = welcomeMessage;
+        // document.getElementById("todayWeather").innerHTML = "";
 
         render();
       });
