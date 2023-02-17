@@ -276,19 +276,19 @@ function weather(lng, lat) {
 }
 
 // News API
+
+// News API
 function news(city) {
-  fetch(
-    `https://newsapi.org/v2/everything?q=${city}&from=2023-02-01&sortBy=publishedAt&apiKey=429d3483717a4b48b7f79203ade739d4`
-  )
-    .then((response) => response.json())
-    .then((response) => {
-      console.log(response);
-      let data = response.articles;
-      let html2 = "";
-      console.log(data);
-      for (let i = 0; i < 5; i++) {
-        const element = data[i];
-        html2 += `
+  fetch(`https://gnews.io/api/v4/search?q=example&lang=en&${city}=us&max=10&apikey=f39b07a04d0b83c6a72db9a261d55526`)
+	.then(response => response.json())
+  .then(response => {
+   
+    let data = response.articles;
+    let html2 = '';
+  
+    for (let i = 0; i < 5; i++) {
+      const element = data[i];
+      html2 +=  `
         <div class="card" style="width: 75%;">   
           <div class="card-header">       
           <h3 class="title">${data[i].title}</h3>
@@ -301,12 +301,43 @@ function news(city) {
           </div>  
         </div>
       `;
-      }
-
-      document.getElementById("newsContent").innerHTML = html2;
-    })
-    .catch((err) => console.error(err));
+    }
+    document.getElementById("newsContent").innerHTML = html2;
+  })
+ 
 }
+
+// function news(city) {
+//   fetch(
+//     `https://newsapi.org/v2/everything?q=${city}&from=2023-02-01&sortBy=publishedAt&apiKey=429d3483717a4b48b7f79203ade739d4`
+//   )
+//     .then((response) => response.json())
+//     .then((response) => {
+//       console.log(response);
+//       let data = response.articles;
+//       let html2 = "";
+//       console.log(data);
+//       for (let i = 0; i < 5; i++) {
+//         const element = data[i];
+//         html2 += `
+//         <div class="card" style="width: 75%;">   
+//           <div class="card-header">       
+//           <h3 class="title">${data[i].title}</h3>
+//           </div>
+//           <div class="card-body">
+//           <img src=${data[i].image} alt="img" class="images2">
+//           <h3 class="title2">${data[i].description}</h3>
+//           <p class="date">Date: ${data[i].publishedAt.slice(0,-10)}</p>  
+//           <p><a href="${data[i].url}" target="_blank" class="btn btn-outline-danger">More</a></p>               
+//           </div>  
+//         </div>
+//       `;
+//       }
+
+//       document.getElementById("newsContent").innerHTML = html2;
+//     })
+//     .catch((err) => console.error(err));
+// }
 
 // <div class="cards">
 // <img src=${item.image} alt="img" class="images">
