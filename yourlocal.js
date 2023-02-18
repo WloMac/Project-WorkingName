@@ -1,5 +1,5 @@
 //Welcome section
-let historyBtn = document.getElementById("searchHistory")
+let historyBtn = document.getElementById("searchHistory");
 let welcomeCity = document.getElementById("welcome");
 let searchedHistoryArray =
   JSON.parse(localStorage.getItem("searchHistoryLocal")) || [];
@@ -13,29 +13,55 @@ function render() {
   document.getElementById("history").innerHTML = "";
 
   if (searchedHistoryArray.length < 1) {
-    for (i = 0; i < 6; i++) {
-      let historyText = "";
-      let displayText = $("<button>")
-        .text(historyText)
-        .attr("class", "newButton");
-      $("#history").append(displayText);
-    }
-  } else {
-    for (i = 0; i < 5; i++) {
-      let historyText = searchedHistoryArray[i];
-      let displayText = $("<button>")
-        .text(historyText)
-        .attr("class", "newButton");
-      $("#history").append(displayText);
-    }
+    document.getElementById("searchHistory").style.visibility = "hidden";
+  } else
+  document.getElementById("searchHistory").style.visibility = "visible";
+  for (i = 0; i < searchedHistoryArray.length; i++) {
+    let historyText = searchedHistoryArray[i];
+    let displayText = $("<button>")
+      .text(historyText)
+      .attr("class", "newButton");
+    $("#history").append(displayText);
   }
+
+
+
+
 }
 
+// function render() {
+//   searchedHistoryArray =
+//     JSON.parse(localStorage.getItem("searchHistoryLocal")) || [];
+//   document.getElementById("history").innerHTML = "";
+
+//   if (searchedHistoryArray.length < 1) {
+//     for (i = 0; i < 6; i++) {
+//       let historyText = "";
+//       let displayText = $("<button>")
+//         .text(historyText)
+//         .attr("class", "newButton");
+//       $("#history").append(displayText);
+//     }
+//   } else {
+//     for (i = 0; i < 5; i++) {
+//       let historyText = searchedHistoryArray[i];
+//       let displayText = $("<button>")
+//         .text(historyText)
+//         .attr("class", "newButton");
+//       $("#history").append(displayText);
+//     }
+//   }
+// }
+
 //Search history function
+
+
+
+
 function saveCityHistory(citySearchedFor) {
-  if (searchedHistoryArray.length > 5) {
+  if (searchedHistoryArray.length > 4) {
     searchedHistoryArray.unshift([citySearchedFor]);
-    searchedHistoryArray.pop;
+    searchedHistoryArray.pop();
   } else {
     searchedHistoryArray.unshift([citySearchedFor]);
   }
@@ -88,7 +114,6 @@ function events(city) {
   )
     .then((response) => response.json())
     .then((response) => {
-     
       let data = response.data;
       let html = "";
       data.forEach((item) => {
@@ -113,21 +138,17 @@ function events(city) {
       });
 
       document.getElementById("root").innerHTML = html;
-    })
-    
+    });
 }
 
 //Events displayed based on user city input
 let button = document.querySelector(".button-search");
 let inputValue = document.querySelector(".inputValue");
 
-
-
 button.addEventListener("click", function () {
   let citySearchedFor = inputValue.value;
-  
+
   getData(citySearchedFor);
-  
 });
 
 historyBtn.addEventListener("click", function (event) {
@@ -136,12 +157,10 @@ historyBtn.addEventListener("click", function (event) {
 
   // document.getElementById("todayWeather").innerHTML = "";
 
-        
   getData(citySearchedFor);
 });
 
 function getData(citySearchedFor) {
-
   saveCityHistory(citySearchedFor);
   news(citySearchedFor);
 
@@ -152,7 +171,6 @@ function getData(citySearchedFor) {
   )
     .then((response) => response.json())
     .then((response) => {
-      
       let data = response.data;
       let html = "";
       data.forEach((item) => {
@@ -185,19 +203,7 @@ function getData(citySearchedFor) {
       document.getElementById("root").innerHTML = html;
     })
     .catch((err) => console.error(err));
-  };
-
-
-
-
-
-
-
-
-
-
-
-
+}
 
 // button.addEventListener("click", function () {
 //   let citySearchedFor = inputValue.value;
@@ -216,7 +222,7 @@ function getData(citySearchedFor) {
 //       let html = "";
 //       data.forEach((item) => {
 //         html += `
-      
+
 //       <div class="card" style="width: 18rem;">
 //       <img src=${item.image} alt="img" class="images">
 //       <div class="card-body">
@@ -228,7 +234,7 @@ function getData(citySearchedFor) {
 //           0,
 //           -14
 //         )} ${item.startDate.slice(11, -8)} </p>
-       
+
 //         <a href="${
 //           item.location.sameAs
 //         }" target="_blank" class="btn btn-outline-danger">More Info</a>
@@ -247,17 +253,6 @@ function getData(citySearchedFor) {
 //     .catch((err) => console.error(err));
 // });
 
-
-
-
-
-
-
-
-
-
-
-
 // ------------------------ Wlodek input ----------------------//
 // Weather API based on user location
 function weather(lng, lat) {
@@ -266,7 +261,6 @@ function weather(lng, lat) {
   )
     .then((response) => response.json())
     .then((response) => {
-     
       let htmlInput = "";
       htmlInput = document.getElementById("todayWeather");
       let temp = response.daily.temperature_2m_max;
@@ -279,16 +273,17 @@ function weather(lng, lat) {
 
 // News API
 function news(city) {
-  fetch(`https://gnews.io/api/v4/search?q=example&lang=en&${city}=us&max=10&apikey=f39b07a04d0b83c6a72db9a261d55526`)
-	.then(response => response.json())
-  .then(response => {
-   
-    let data = response.articles;
-    let html2 = '';
-  
-    for (let i = 0; i < 5; i++) {
-      const element = data[i];
-      html2 +=  `
+  fetch(
+    `https://gnews.io/api/v4/search?q=example&lang=en&${city}=us&max=10&apikey=f39b07a04d0b83c6a72db9a261d55526`
+  )
+    .then((response) => response.json())
+    .then((response) => {
+      let data = response.articles;
+      let html2 = "";
+
+      for (let i = 0; i < 5; i++) {
+        const element = data[i];
+        html2 += `
         <div class="card" style="width: 75%;">   
           <div class="card-header">       
           <h3 class="title">${data[i].title}</h3>
@@ -296,15 +291,16 @@ function news(city) {
           <div class="card-body">
           <img src=${data[i].image} alt="img" class="images2">
           <h3 class="title2">${data[i].description}</h3>
-          <p class="date">Date: ${data[i].publishedAt.slice(0,-10)}</p>  
-          <p><a href="${data[i].url}" target="_blank" class="btn btn-outline-danger">More</a></p>               
+          <p class="date">Date: ${data[i].publishedAt.slice(0, -10)}</p>  
+          <p><a href="${
+            data[i].url
+          }" target="_blank" class="btn btn-outline-danger">More</a></p>               
           </div>  
         </div>
       `;
-    }
-    document.getElementById("newsContent").innerHTML = html2;
-  })
- 
+      }
+      document.getElementById("newsContent").innerHTML = html2;
+    });
 }
 
 // function news(city) {
@@ -320,16 +316,16 @@ function news(city) {
 //       for (let i = 0; i < 5; i++) {
 //         const element = data[i];
 //         html2 += `
-//         <div class="card" style="width: 75%;">   
-//           <div class="card-header">       
+//         <div class="card" style="width: 75%;">
+//           <div class="card-header">
 //           <h3 class="title">${data[i].title}</h3>
 //           </div>
 //           <div class="card-body">
 //           <img src=${data[i].image} alt="img" class="images2">
 //           <h3 class="title2">${data[i].description}</h3>
-//           <p class="date">Date: ${data[i].publishedAt.slice(0,-10)}</p>  
-//           <p><a href="${data[i].url}" target="_blank" class="btn btn-outline-danger">More</a></p>               
-//           </div>  
+//           <p class="date">Date: ${data[i].publishedAt.slice(0,-10)}</p>
+//           <p><a href="${data[i].url}" target="_blank" class="btn btn-outline-danger">More</a></p>
+//           </div>
 //         </div>
 //       `;
 //       }
