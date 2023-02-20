@@ -20,6 +20,11 @@ scroll-behavior: smooth;
 .text{
   font-size: 1.5rem;
 }
+.font{
+  font-family: 'League Spartan', sans-serif;
+  color: var(--wh) !important;
+}
+
 .top-div {
 display: flex;
 background: #fe5858;
@@ -40,13 +45,19 @@ width: 100%;
 }
 
 .navigation a {
-  overflow: hidden;
+overflow: hidden;
 float: right;
 background: #fe5858;
 color: rgb(243, 215, 215);
 text-align: center;
 padding-top: 15px;
 }
+
+/* Navbar backgounrd color */
+.bg-light-copy{
+  background-color: #fe5858;
+}
+
 
 .header-wrapper {
 color: white;
