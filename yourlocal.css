@@ -67,7 +67,7 @@ padding-top: 30px;
 font-size: 20px;
 text-align: center;
 background-color: steelblue;
-background-image: url(./Images/istockphoto-587220352-170667a.jpg);
+background-image: url(./images/istockphoto-587220352-170667a.jpg);
 padding-bottom: 20px;
 }
 
@@ -76,7 +76,7 @@ padding-bottom: 20px;
 /* background-color: white; */
 /* background-image: url(./Images/53541125-white-background-soft-light-grey-texture.webp); */
 padding-bottom: 20px;
-background-image: url(./Images/blue-marble-texture-background_34936-2539.avif);
+background-image: url(./images/blue-marble-texture-background_34936-2539.avif);
 border-bottom: 5px solid #fe5858;
 }
 
@@ -199,6 +199,12 @@ z-index: 1;
 width: 230px;
   height: 80px;
   background-color:  var(--feb);
+}
+
+@media (max-width: 452px){
+  .header{
+    margin-left: -70px;
+  }
 }
 
 /* container with all cards/events */
