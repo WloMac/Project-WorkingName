@@ -59,17 +59,26 @@ padding-top: 15px;
 }
 
 
+.navbar{
+  margin-bottom: 30px;
+}
+
+
 .header-wrapper {
 color: white;
 align-items: center;
 line-height: .7;
-padding-top: 30px;
-font-size: 20px;
+padding-top: 70px;
+/* font-size: 20px; */
 text-align: center;
 background-color: steelblue;
 background-image: url(./images/istockphoto-587220352-170667a.jpg);
 padding-bottom: 20px;
+font-size: 1.9rem;
 }
+
+
+
 
 .hero {
 
@@ -82,11 +91,24 @@ border-bottom: 5px solid #fe5858;
 
 
 
+
+
 /* Part of the header */
-.todayWeather{
+#todayWeather{
   color: var(--wh);
   font-family: 'League Spartan', sans-serif;
-  font-size: 28px;
+  font-size: 1rem;
+}
+
+@media (max-width: 768px){
+#todayWeather{
+  color: var(--wh);
+  font-family: 'League Spartan', sans-serif;
+  margin-top: 30px;
+}
+#welcome{
+  font-size: 1.5rem;
+}
 }
 
 h1.header{
@@ -107,6 +129,7 @@ h1.header{
   .images{
     background-image: url(./images/actionvance.jpeg);
     background-size: cover ;
+    
   }
 
 /* 'Events by location' header */
@@ -203,8 +226,11 @@ width: 230px;
 
 @media (max-width: 452px){
   .header{
-    margin-left: -70px;
+    margin-left: -50px;
   }
+ 
+
+
 }
 
 /* container with all cards/events */
@@ -223,7 +249,8 @@ width: 230px;
 
   margin-bottom: 30px;
   transition: all 0.3s;
-  box-shadow: 2.5px 3px #7e3838
+  box-shadow: 2.5px 3px #7e3838;
+  z-index: 1;
   
 }
 .card:hover {
@@ -278,7 +305,6 @@ height: 54px;
 .header-wrapper p {
 font-size: 13px;
 line-height: .5;
-
 }
 
 .header-wrapper {
