@@ -4,12 +4,25 @@
 
 As a news-hungry individual who is always on the go, I want to have access to a website with an API that provides me with the latest local news, entertainment, and weather updates based on my current location. This way, I can stay informed about what's happening around me and plan my day accordingly, without having to search for information from multiple sources. The website should be user-friendly, and the API should be easy to use and integrate into my other applications.
 
-## Deployed Links
+<hr>
 
-GitHub repository: https://github.com/WloMac/YourLocal
+## Table of content
+1. [User story](#user-story)
+2. [Description](#description)
+3. [API](#apis)
+4. [Website Layout](#website-layout)
+5. [Code sample](#code-sample)
+6. [API code](#api-code)
+7. [Usage](#usage)
+8. [Project Contributors](#project-contributors)
+9. [Future contribution](#future-contribution)
+10. [Deployed Links](#deployed-links)
+11. [License](#license)
+<hr>
 
+## Description
 
-Deployed website: https://wlomac.github.io/YourLocal/
+This page incorporates the use of different API's on a complete site which allows a user to enter their details and their location is pin pointed and the news for their area is displayed. Allowing for a more user tailored experience, a colour pallet was chosen as wel as fonts that are more inviting and "fun" allowing for better mental engagement and memory.
 
 ## API's
 IP location API:
@@ -27,84 +40,86 @@ https://api.openweathermap.org
 News API
 https://gnews.io
 
-## Description
-
-This page incorporates the use of different API's on a complete site which allows a user to enter their details and their location is pin pointed and the news for their area is displayed. Allowing for a more user tailored experience, a colour pallet was chosen as wel as fonts that are more inviting and "fun" allowing for better mental engagement and memory.
-
 ## Website layout
 
 
-Welcome section:
-<p align="center">
-<img src="https://github.com/WloMac/YourLocal/blob/Wlodek-testSunday/images/Screenshot%202023-02-10%20at%2010.42.42.png"/>
-</p>
-Website Navbar:
-<p align="center">
-  <img src="https://github.com/WloMac/YourLocal/blob/Wlodek-testSunday/images/Screenshot%202023-02-10%20at%2010.43.09.png" />
-</p>
+* Welcome section:
 
-Events based on user city input:
-<p align="center">
-  <img src="https://github.com/WloMac/YourLocal/blob/Wlodek-testSunday/images/Screenshot%202023-02-10%20at%2010.43.19.png" />
-</p>
+  ![Welcome](./images/ReadmeScreenshot1.png)
 
-Search history:
-<p align="center">
-  <img src="https://github.com/WloMac/YourLocal/blob/Wlodek-testSunday/images/Screenshot%202023-02-10%20at%2010.44.34.png" />
-</p>
 
-Section title:
-<p align="center">
-  <img src="https://github.com/WloMac/YourLocal/blob/Wlodek-testSunday/images/Screenshot%202023-02-10%20at%2010.43.40.png" />
-</p>
+* Website Navbar:
 
-Events based on user city input:
-<p align="center">
-  <img src="https://github.com/WloMac/YourLocal/blob/Wlodek-testSunday/images/Screenshot%202023-02-10%20at%2010.44.50.png" />
-</p>
+  ![Navbar](./images/ReadmeScreenshot2.png)
 
-Footer with contact section:
- <p align="center">
-  <img src="https://github.com/WloMac/YourLocal/blob/Wlodek-testSunday/images/Screenshot%202023-02-10%20at%2010.46.06.png" />
 
-  ## Code example
-  Code save user city input:
-  <img src="https://github.com/WloMac/YourLocal/blob/Wlodek-testSunday/images/Screenshot%202023-02-10%20at%2010.50.49.png">
+* Events based on user city input:
+
+  ![Events](./images/Screenshot.png)
+
+* Search history:
+
+  ![Search history](./images/ReadmeScreenshot3.png)
+
+* Section title:
+
+  ![Section title](./images/ReadmeScreenshot4.png)
+
+* Events based on user city input:
+
+  ![Events based on search](./images/ReadmeScreenshot5.png)
+
+* Footer with contact section:
+  
+  ![Footer](./images/ReadmeScreenshot9.png)
+
+## Code sample
+
+  * Code save user city input:
+
+   ![Code](./images/ReadmeScreenshot12.png)
   
 ## API code
   
-Events:
-   <p align="center">
-  <img src="https://github.com/WloMac/YourLocal/blob/Wlodek-testSunday/images/Screenshot%202023-02-10%20at%2010.47.28.png" />
+* Events:
+  ![Events API](./images/ReadmeScreenshot10.png)
  
-Weather based on IP location:
+* Weather based on IP location:
      
- <img src="https://github.com/WloMac/YourLocal/blob/Wlodek-testSunday/images/Screenshot%202023-02-10%20at%2010.49.06.png">
+ ![Navbar](./images/ReadmeScreenshot11.png)
  
 ## Usage
 
-As aforementioned, this page uses many APIs across the whole site, enabling users to submit their information, have their location pinpointed, and get the local news. A colour scheme and typefaces that are more appealing and "fun" were chosen to enable for a more user-tailored experience, improving mental engagement and recall. They will get access to the website, which gives them the most recent information on local news, entertainment, and weather based on where they are. Keeping up with local events so they may organise their day properly without having to look up information from many sources.
+* As aforementioned, this page uses many APIs across the whole site, enabling users to submit their information, have their location pinpointed, and get the local news. 
+* A colour scheme and typefaces that are more appealing and "fun" were chosen to enable for a more user-tailored experience, improving mental engagement and recall. 
+* Users will get access to the website, which gives them the most recent information on local news, entertainment, and weather based on where they are. Keeping up with local events so they may organise their day properly without having to look up information from many sources.
 
 <br>
 <br>
 
 ## Project contributors: 
  Team working on this app:
+ 
+   [Gioevani](https://github.com/Gioedx) 
      
-     https://github.com/Gioedx
+  [Wlodek](https://github.com/WloMac)
      
-     https://github.com/WloMac
+  [Mariusz](https://github.com/gines18/)
      
-     https://github.com/gines18/
-     
-     https://github.com/QByter
+  [Shahid](https://github.com/QByter)
      
      Teaching Assistant: Martin William
      
 ## Future contribution:
      
-     If you would like to contribute to the development of this project, feel free to submit a pull request with your proposed changes.
+     If you would like to contribute to the development of this project, please reach us by GitHub
 
+
+## Deployed Links
+
+  * GitHub repository: https://github.com/WloMac/YourLocal
+
+  * Deployed website: https://wlomac.github.io/YourLocal/
 ## License
 
 Please refer to the LICENSE in the repo.
