@@ -165,6 +165,11 @@ color: white;
   background-color: var(--ee);
 }
 
+/* nav buttons hover */
+.nav-link:hover{
+  background-color: #ed7d7d;
+}
+
 
 
 
@@ -214,7 +219,7 @@ top: 43px;
 display: flex;
 justify-content: center;
 position: relative;
-left: 135px;
+left: 10%;
 padding: 0;
 margin: 0;
 font-size: 3rem;
@@ -224,9 +229,9 @@ width: 230px;
   background-color:  var(--feb);
 }
 
-@media (max-width: 452px){
+@media (max-width: 390px){
   .header{
-    margin-left: -50px;
+    margin-left: -5%;
   }
  
 
@@ -249,13 +254,13 @@ width: 230px;
 
   margin-bottom: 30px;
   transition: all 0.3s;
-  box-shadow: 2.5px 3px #7e3838;
+  box-shadow: 2.5px 3px #0000003e;
   z-index: 1;
   
 }
 .card:hover {
 transform: scale(1.03);
-box-shadow: 7px 7px #7e3838;
+box-shadow: 7px 7px #0000003e;
 }
 
 /* Event name */
