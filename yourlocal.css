@@ -66,39 +66,60 @@ padding-top: 15px;
 
 .header-wrapper {
 color: white;
-align-items: center;
-line-height: .7;
-padding-top: 70px;
-/* font-size: 20px; */
+height: 1100px;
+font-family: 'League Spartan', sans-serif;
 text-align: center;
-background-color: steelblue;
-background-image: url(./images/istockphoto-587220352-170667a.jpg);
+background-color: rgba(247, 120, 9, 0.6);
+background-blend-mode: multiply;
+background-image: url(./images/WloHeroBackG-Prop.jpg);
+background-size: cover;
+background-position: 80% 60%; 
 padding-bottom: 20px;
-font-size: 1.9rem;
+font-size: 4rem;
 }
 
-
-
-
-.hero {
-
-/* background-color: white; */
-/* background-image: url(./Images/53541125-white-background-soft-light-grey-texture.webp); */
-padding-bottom: 20px;
-background-image: url(./images/blue-marble-texture-background_34936-2539.avif);
-border-bottom: 5px solid #fe5858;
+.button-search{
+  margin: 35px;
+  padding: 8px 20px;
+  border-radius: 20px;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  background-color: rgba(255, 255, 255, 0.445);
+  color: black;
+  border: 2px solid var(--wh);
+  box-shadow: 5px 10px hsl(0, 0%, 0%);
+  font-size: 3.5rem;
+ 
 }
 
+.newButton{
+  margin: 35px;
+  padding: 8px 20px;
+  border-radius: 20px;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  background-color: rgba(255, 255, 255, 0.462);
+  color: black;
+  border: 2px solid var(--wh);
+  box-shadow: 5px 10px hsl(0, 0%, 0%);
+  font-size: 2rem;
+  display: inline;
+  justify-content: space-evenly;
 
-
-
-
-/* Part of the header */
-#todayWeather{
+}
+.inputValue{
   color: var(--wh);
-  font-family: 'League Spartan', sans-serif;
-  font-size: 1rem;
+  background-color: rgba(255, 255, 255, 0.357);
+  border: 2px solid var(--wh);
+  border-radius: 20px;
+  box-shadow: 5px 10px hsl(0, 0%, 0%);
+  font-size: 4rem;
+
 }
+
+
 
 @media (max-width: 768px){
 #todayWeather{
@@ -116,15 +137,6 @@ h1.header{
   font-family: 'League Spartan', sans-serif;
 }
 
-/* Container with input and search button */
-.container{
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
-    /* background-color: aliceblue; */
-  }
 
   .images{
     background-image: url(./images/actionvance.jpeg);
@@ -132,38 +144,34 @@ h1.header{
     
   }
 
-/* 'Events by location' header */
-.events{
-  font-size: 2rem;
-  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-  margin-top: 30px;
-}
 
-input{
-  box-shadow: 3px 3px;
-  margin-bottom: 10px;
-  padding: 6px;
-  border-radius: 5px;
-  outline: none !important; 
-}
-
-.button-search{
-  width: 200px;
-  height: 30px;
-  padding: 0;
-  margin: 0;
-  cursor: pointer;
-  border-radius: 10px;
-  /* box-shadow: 2px 3px; */
-  outline: none !important; 
-  background-color: #4285f4;
+.white-btn{
+  padding: 8px 20px;
+  border-radius: 2px;
+  outline: none;
   border: none;
-color: white;
+  cursor: pointer;
 }
 
-.button-search:hover{
-  background-color: var(--ee);
+.white-btn-stl{
+  background-color: var(--wh);
+  color: #242424;
+  border: px solid var(--wh);
+  font-size: 20px;
+
 }
+
+.transparent-btn-stl{
+  background-color: transparent;
+  color: var(--wh);
+  padding: 8px 20px;
+  transition: all 0.3s ease-out;
+  font-size: 15px;
+}
+
+
+
+
 
 /* nav buttons hover */
 .nav-link:hover{
@@ -178,6 +186,7 @@ display: flex;
 flex-direction: column;
 align-items: center;
 margin-top: 20px;
+
 }
 
 #history{
@@ -190,11 +199,6 @@ border-top: 2px solid var(--ee);
 margin-top: 5px;
 }
 
-/* #history p{
-padding-right: 5px;
-padding-left: 5px;
-border-top: 1px solid var(--ee)
-} */
 
 /* What's on - header */
 .container-header{
@@ -338,7 +342,7 @@ font-size: 20px;
 .newButton {
 /* background: #fe5555; */
 /* background: rgb(134, 29, 29); */
-color: #fff;
+/* color: #fff;
 width: 100px;
 height: 28px;
 margin: 5px;
@@ -346,13 +350,8 @@ font-size: 13px;
 border-radius: 10px;
 border: 1px solid blue;
 transform: scale(1.03);
-transition: .3s;
+transition: .3s; */
 
-}
-
-.hero {
-
-padding-bottom: 45px;
 }
 
 
@@ -371,11 +370,6 @@ ul li{
    /* padding: 5px; */
   
   }
-
-
-
-
-
 
 .container{
     display: flex;
@@ -452,8 +446,8 @@ footer div {
   padding: 5px;
 }
 .inputValue{
-  width: 200px;
-  border-color: 1px solid black;
+
+
 }
 
 .button2{
@@ -467,27 +461,6 @@ footer div {
 
 }
 
-.newButton {
-/* background: #fe5555; */
-background: #00265a;
-color: #fff;
-width: 100px;
-height: 28px;
-margin: 5px;
-border-radius: 10px;
-border: 1px solid blue;
-transform: scale(1.03);
-transition: .3s;
-
-}
-
-
-.newButton:hover {
-/* background-color: lightblue; */
-background-color: var(--ee);
-
-color: black;
-}
 .container3{
   display: flex;
   flex-direction: column;
