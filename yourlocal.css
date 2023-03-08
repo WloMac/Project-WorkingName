@@ -77,6 +77,13 @@ background-position: 80% 60%;
 padding-bottom: 20px;
 font-size: 4rem;
 }
+.introContainer{
+  margin-top: 11%;
+  display: inline-block;
+
+
+
+}
 
 .button-search{
   margin: 35px;
@@ -86,10 +93,12 @@ font-size: 4rem;
   border: none;
   cursor: pointer;
   background-color: rgba(255, 255, 255, 0.445);
-  color: black;
+  color: var(--wh);
   border: 2px solid var(--wh);
-  box-shadow: 5px 10px hsl(0, 0%, 0%);
+  /* box-shadow: 5px 10px hsl(0, 0%, 0%); */
   font-size: 3.5rem;
+  text-align: center;
+  transition: all 0.3s ease-out;
  
 }
 
@@ -101,12 +110,13 @@ font-size: 4rem;
   border: none;
   cursor: pointer;
   background-color: rgba(255, 255, 255, 0.462);
-  color: black;
+  color: var(--wh);
   border: 2px solid var(--wh);
-  box-shadow: 5px 10px hsl(0, 0%, 0%);
+  /* box-shadow: 5px 10px hsl(0, 0%, 0%); */
   font-size: 2rem;
   display: inline;
   justify-content: space-evenly;
+  text-align: center;
 
 }
 .inputValue{
@@ -114,12 +124,13 @@ font-size: 4rem;
   background-color: rgba(255, 255, 255, 0.357);
   border: 2px solid var(--wh);
   border-radius: 20px;
-  box-shadow: 5px 10px hsl(0, 0%, 0%);
+  /* box-shadow: 5px 10px hsl(0, 0%, 0%); */
   font-size: 4rem;
+  text-align: center;
 
 }
 
-
+ 
 
 @media (max-width: 768px){
 #todayWeather{
@@ -145,29 +156,7 @@ h1.header{
   }
 
 
-.white-btn{
-  padding: 8px 20px;
-  border-radius: 2px;
-  outline: none;
-  border: none;
-  cursor: pointer;
-}
 
-.white-btn-stl{
-  background-color: var(--wh);
-  color: #242424;
-  border: px solid var(--wh);
-  font-size: 20px;
-
-}
-
-.transparent-btn-stl{
-  background-color: transparent;
-  color: var(--wh);
-  padding: 8px 20px;
-  transition: all 0.3s ease-out;
-  font-size: 15px;
-}
 
 
 
