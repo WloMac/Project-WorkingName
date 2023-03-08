@@ -24,39 +24,11 @@ function render() {
     $("#history").append(displayText);
   }
 
-
-
-
 }
 
-// function render() {
-//   searchedHistoryArray =
-//     JSON.parse(localStorage.getItem("searchHistoryLocal")) || [];
-//   document.getElementById("history").innerHTML = "";
 
-//   if (searchedHistoryArray.length < 1) {
-//     for (i = 0; i < 6; i++) {
-//       let historyText = "";
-//       let displayText = $("<button>")
-//         .text(historyText)
-//         .attr("class", "newButton");
-//       $("#history").append(displayText);
-//     }
-//   } else {
-//     for (i = 0; i < 5; i++) {
-//       let historyText = searchedHistoryArray[i];
-//       let displayText = $("<button>")
-//         .text(historyText)
-//         .attr("class", "newButton");
-//       $("#history").append(displayText);
-//     }
-//   }
-// }
 
 //Search history function
-
-
-
 
 function saveCityHistory(citySearchedFor) {
   if (searchedHistoryArray.length > 4) {
@@ -153,10 +125,8 @@ button.addEventListener("click", function () {
 
 historyBtn.addEventListener("click", function (event) {
   let citySearchedFor = event.target.innerHTML;
-  console.log(citySearchedFor);
-
-  // document.getElementById("todayWeather").innerHTML = "";
-
+  
+  
   getData(citySearchedFor);
 });
 
@@ -164,9 +134,7 @@ function getData(citySearchedFor) {
   saveCityHistory(citySearchedFor);
   news(citySearchedFor);
 
-  fetch(
-    // `https://concerts-artists-events-tracker.p.rapidapi.com/location?name=${inputValue.value}&minDate=2023-02-09&maxDate=2023-12-31&page=1`,
-    `https://concerts-artists-events-tracker.p.rapidapi.com/location?name=${citySearchedFor}&minDate=2023-02-09&maxDate=2023-12-31&page=1`,
+  fetch(`https://concerts-artists-events-tracker.p.rapidapi.com/location?name=${citySearchedFor}&minDate=2023-02-09&maxDate=2023-12-31&page=1`,
     options
   )
     .then((response) => response.json())
@@ -193,10 +161,7 @@ function getData(citySearchedFor) {
       </div>
     </div>
       `;
-        // let welcomeMessage = "Your chosen city is " + inputValue.value;
-        // welcomeCity.innerHTML = welcomeMessage;
-        // document.getElementById("todayWeather").innerHTML = "";
-
+       
         render();
       });
 
@@ -204,54 +169,6 @@ function getData(citySearchedFor) {
     })
     .catch((err) => console.error(err));
 }
-
-// button.addEventListener("click", function () {
-//   let citySearchedFor = inputValue.value;
-
-//   saveCityHistory(citySearchedFor);
-//   news(citySearchedFor);
-
-//   fetch(
-//     `https://concerts-artists-events-tracker.p.rapidapi.com/location?name=${inputValue.value}&minDate=2023-02-09&maxDate=2023-12-31&page=1`,
-//     options
-//   )
-//     .then((response) => response.json())
-//     .then((response) => {
-//       console.log(response.data);
-//       let data = response.data;
-//       let html = "";
-//       data.forEach((item) => {
-//         html += `
-
-//       <div class="card" style="width: 18rem;">
-//       <img src=${item.image} alt="img" class="images">
-//       <div class="card-body">
-//         <h5 class="name">${item.name}</h5>
-//         <p class="city">${item.location.address.addressLocality} - ${
-//           item.location.name
-//         }</p>
-//         <p class="date">Date: ${item.startDate.slice(
-//           0,
-//           -14
-//         )} ${item.startDate.slice(11, -8)} </p>
-
-//         <a href="${
-//           item.location.sameAs
-//         }" target="_blank" class="btn btn-outline-danger">More Info</a>
-//       </div>
-//     </div>
-//       `;
-//         let welcomeMessage = "Your chosen city is " + inputValue.value;
-//         welcomeCity.innerHTML = welcomeMessage;
-//         document.getElementById("todayWeather").innerHTML = "";
-
-//         render();
-//       });
-
-//       document.getElementById("root").innerHTML = html;
-//     })
-//     .catch((err) => console.error(err));
-// });
 
 // ------------------------ Wlodek input ----------------------//
 // Weather API based on user location
@@ -268,8 +185,6 @@ function weather(lng, lat) {
       htmlInput.textContent = `Your temperature today is: ${temp[0]} °C`;
     });
 }
-
-// News API
 
 // News API
 function news(city) {
@@ -303,48 +218,6 @@ function news(city) {
     });
 }
 
-// function news(city) {
-//   fetch(
-//     `https://newsapi.org/v2/everything?q=${city}&from=2023-02-01&sortBy=publishedAt&apiKey=429d3483717a4b48b7f79203ade739d4`
-//   )
-//     .then((response) => response.json())
-//     .then((response) => {
-//       console.log(response);
-//       let data = response.articles;
-//       let html2 = "";
-//       console.log(data);
-//       for (let i = 0; i < 5; i++) {
-//         const element = data[i];
-//         html2 += `
-//         <div class="card" style="width: 75%;">
-//           <div class="card-header">
-//           <h3 class="title">${data[i].title}</h3>
-//           </div>
-//           <div class="card-body">
-//           <img src=${data[i].image} alt="img" class="images2">
-//           <h3 class="title2">${data[i].description}</h3>
-//           <p class="date">Date: ${data[i].publishedAt.slice(0,-10)}</p>
-//           <p><a href="${data[i].url}" target="_blank" class="btn btn-outline-danger">More</a></p>
-//           </div>
-//         </div>
-//       `;
-//       }
-
-//       document.getElementById("newsContent").innerHTML = html2;
-//     })
-//     .catch((err) => console.error(err));
-// }
-
-// <div class="cards">
-// <img src=${item.image} alt="img" class="images">
-// <h2 class="name">${item.name}</h2>
-// <p class="city">${item.location.address.addressLocality} - ${item.location.name}</p>
-// <p class="date">Date: ${item.startDate}</p>
-
-// <button class="website-button"><a target="_blank" class="description" href="${item.location.sameAs}">Buy tickets</a></button>
-// </div>
-
-//<p class="description">Description: ${item.description}</p>
 
 // Weather based on user city input
 let button2 = document.querySelector(".button2");
@@ -362,7 +235,6 @@ button2.addEventListener("click", function () {
   )
     .then((response) => response.json())
     .then((data) => {
-      console.log(data);
       let nameValue = data.name;
       let tempValue = "Temp " + data.main.temp.toFixed(1) + "°C";
       let descValue = data.weather[0].description;
