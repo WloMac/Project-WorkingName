@@ -125,8 +125,7 @@ button.addEventListener("click", function () {
 
 historyBtn.addEventListener("click", function (event) {
   let citySearchedFor = event.target.innerHTML;
-  console.log(citySearchedFor);
-
+  
   // document.getElementById("todayWeather").innerHTML = "";
 
   getData(citySearchedFor);
@@ -244,7 +243,6 @@ button2.addEventListener("click", function () {
   )
     .then((response) => response.json())
     .then((data) => {
-      console.log(data);
       let nameValue = data.name;
       let tempValue = "Temp " + data.main.temp.toFixed(1) + "°C";
       let descValue = data.weather[0].description;
