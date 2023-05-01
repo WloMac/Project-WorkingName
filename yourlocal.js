@@ -73,7 +73,7 @@ function ipLocate() {
 let options = {
   method: "GET",
   headers: {
-    "X-RapidAPI-Key": "3305c8d758msh96587b8a3306f7ep1d1bafjsn300995769472",
+    "X-RapidAPI-Key": "e68c62c1b8msh3e3faba70dbdb8fp10fe20jsnf4c05aea9505",
     "X-RapidAPI-Host": "concerts-artists-events-tracker.p.rapidapi.com",
   },
 };
